@@ -1,8 +1,8 @@
-[README.md](https://github.com/user-attachments/files/22710986/README.md)
+[README.md](https://github.com/user-attachments/files/22711014/README.md)
 # UniCrossed
 
-**A Complete Social Networking Platform for University Students**  
-UniCrossed connects university students through networking, enabling knowledge sharing, real-time communication, and academic collaboration.
+**A Study Platform Connecting Students and Content**  
+Imagine a website that connects both students and content. We present you, UniCrossed. It is a study site designed for university students that struggle with either meeting new people and understanding the contents of their university, sometimes even both.
 
 ---
 
@@ -24,9 +24,9 @@ UniCrossed connects university students through networking, enabling knowledge s
 ---
 
 ## About  
-UniCrossed is a comprehensive social networking platform designed specifically for university students. The platform facilitates meaningful connections between students across different universities, enabling them to share knowledge, collaborate on projects, participate in group discussions, and build lasting academic and professional relationships.
+UniCrossed is a comprehensive study platform designed specifically for university students who face challenges in meeting new people and understanding their university content. The platform bridges the gap between social networking and academic support, creating an environment where students can connect with peers while accessing and sharing educational content.
 
-The application combines modern web technologies with real-time communication features, providing an intuitive and engaging user experience that makes academic networking as simple as swiping through profiles.
+The application combines modern web technologies with real-time communication features, providing an intuitive and engaging user experience that makes both academic collaboration and social networking as simple as swiping through profiles.
 
 ---
 
@@ -70,18 +70,20 @@ The application combines modern web technologies with real-time communication fe
 
 ## Technologies  
 
-### **Frontend**
+### **Core Technologies**
+- **Python** - Primary programming language
+- **Django** - Web framework for both backend and frontend
 - **HTML5** - Semantic markup and structure
 - **CSS3** - Advanced styling with animations and responsive design
 - **JavaScript (ES6+)** - Interactive functionality and DOM manipulation
+
+### **Additional Technologies**
+- **Node.js (>=14.0.0)** - Server runtime environment (for real-time features)
+- **Express.js 5.1.0** - Web application framework (for chat module)
+- **Socket.IO 4.8.1** - Real-time bidirectional event-based communication
 - **Font Awesome 6.5.0** - Professional icon library
 
-### **Backend**
-- **Node.js (>=14.0.0)** - Server runtime environment
-- **Express.js 5.1.0** - Web application framework
-- **Socket.IO 4.8.1** - Real-time bidirectional event-based communication
-
-### **Additional Libraries**
+### **Supporting Libraries**
 - **CORS 2.8.5** - Cross-origin resource sharing
 - **Vite 7.0.0** - Build tool and development server (for chat module)
 
@@ -89,11 +91,14 @@ The application combines modern web technologies with real-time communication fe
 - **PowerShell scripts** - Automated server startup
 - **Static file serving** - Multi-directory asset management
 - **Video background support** - Enhanced visual experience
+- **Django development server** - Built-in development capabilities
 
 ---
 
 ## Prerequisites  
-- **Node.js** version 14.0.0 or higher
+- **Python** version 3.8 or higher
+- **Django** framework
+- **Node.js** version 14.0.0 or higher (for real-time chat features)
 - **npm** (comes with Node.js installation)
 - **Modern web browser** with JavaScript enabled
 - **Internet connection** for external CDN resources
@@ -108,21 +113,36 @@ git clone https://github.com/yourusername/unicrossed.git
 cd unicrossed
 ```
 
-### **2. Install main dependencies**
+### **2. Set up Python environment (recommended)**
 ```bash
-npm install
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install Django and Python dependencies
+pip install django
+pip install -r requirements.txt  # if available
 ```
 
-### **3. Install chat module dependencies**
+### **3. Install Node.js dependencies (for real-time features)**
 ```bash
+# Install main dependencies
+npm install
+
+# Install chat module dependencies
 cd Direct
 npm install
 cd ..
 ```
 
-### **4. Start the server**
+### **4. Start the application**
 ```bash
-# Option 1: Use the main server (recommended)
+# Option 1: Use the Node.js server (for full functionality)
 npm start
 
 # Option 2: Use PowerShell script (Windows)
@@ -130,6 +150,9 @@ npm start
 
 # Option 3: Manual start
 node server.js
+
+# Option 4: Django development server (for Django components)
+python manage.py runserver  # if manage.py exists
 ```
 
 The application will be available at:
@@ -305,7 +328,7 @@ For licensing inquiries or permission requests, please contact the development t
 ### **Project Information**
 - **Project Name**: UniCrossed
 - **Version**: 1.0.0
-- **Description**: Complete social networking app for students
+- **Description**: Study platform connecting students and content for university students
 
 ### **Development Team**
 For questions, suggestions, or collaboration opportunities:
